@@ -1,9 +1,12 @@
 version: 1.0
 environment:
   language: python
-  runtime: "3.9"
+  runtime: "3.9"  
 services:
   app:
     build: .
+    commands:
+      - pip install -r requirements.txt
+      - python main.py  # Replace "main.py" with your application's entry point
     ports:
-      - 8080
+      - 8080  # Replace with your app's port if different
