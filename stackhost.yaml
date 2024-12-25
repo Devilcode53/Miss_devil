@@ -1,8 +1,9 @@
 version: 1.0
+environment:
+  language: python
+  runtime: "3.9"
 services:
   app:
     build: .
-    environment:
-      - KEY=VALUE
     ports:
       - 8080
