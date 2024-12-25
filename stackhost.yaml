@@ -1,12 +1,17 @@
-version: 1.0
-environment:
-  language: python
-  runtime: "3.9"  
-services:
-  app:
-    build: .
-    commands:
-      - pip install -r requirements.txt
-      - python main.py  # Replace "main.py" with your application's entry point
-    ports:
-      - 8080  # Replace with your app's port if different
+user:
+  name: ishikki
+  github: ishikki-akabane
+
+language: "python"
+python_version: "3.10"
+
+commands:
+  build:
+    - "pip install -r requirements.txt"
+  package:
+    - "nano inxi"
+  start:
+    - "python3 bot.py"
+
+env:
+  - "ENVIRONMENT=production"
